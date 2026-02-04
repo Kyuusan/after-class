@@ -6,4 +6,13 @@ type ResponseWrapper [T any] struct {
 	Success bool `json:"success"`
 	Message string `json:"message"`
 	Pagination *PaginationResponse `json:"paginantion"`
+	Error      *[]ResponseError    `json:"error,omitempty"`
 } 
+
+type ResponseError struct {
+	Field   string `json:"field"`
+	Value   string `json:"value"`
+	Message string `json:"message"`
+	Target  string `json:"target"`
+	Tag     string `json:"tag"`
+}
