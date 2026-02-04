@@ -10,7 +10,7 @@ import (
 
 // GetTasks godoc
 // @Summary Get tasks
-// @Description Get all tasks
+// @Description Get all tasks 
 // @Tags tasks
 // @Produce json
 // @Success 200 {array} Task
@@ -48,7 +48,6 @@ func HandleGetTask(c *fiber.Ctx) error {
 		},
 	})
 }
-
 
 
 
